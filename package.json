@@ -1,5 +1,5 @@
 {
-  "name": "generator-nodule",
+  "name": "generator-nodecli",
   "version": "1.0.0",
   "description": "A Yeoman generator for nodejs modules",
   "keywords": [
@@ -16,8 +16,8 @@
     "module",
     "modules"
   ],
-  "homepage": "https://github.com/walidsa3d/generator-nodule",
-  "bugs": "https://github.com/walidsa3d/generator-nodule/issues",
+  "homepage": "https://github.com/walidsa3d/generator-nodecli",
+  "bugs": "https://github.com/walidsa3d/generator-nodecli/issues",
   "author": {
     "name": "Walid Saad",
     "email": "walid.sa3d@gmail.com",
@@ -26,7 +26,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/walidsa3d/generator-nodule.git"
+    "url": "git://github.com/walidsa3d/generator-nodecli.git"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha"

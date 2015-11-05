@@ -1,8 +1,8 @@
 'use strict'
-var util = require('util'),
-  path = require('path'),
-  yeoman = require('yeoman-generator'),
-  gitconfig = require('git-config')
+var util = require('util')
+var path = require('path')
+var yeoman = require('yeoman-generator')
+var gitconfig = require('git-config')
 
 var NodejsGenerator = module.exports = function NodejsGenerator (args, options, config) {
   yeoman.generators.Base.apply(this, arguments)
@@ -68,6 +68,12 @@ NodejsGenerator.prototype.askFor = function askFor () {
     },
     {
       type: 'input',
+      name: 'cliName',
+      message: 'Cli Name',
+      default: config.moduleName
+    },
+    {
+      type: 'input',
       name: 'author',
       message: 'Author name',
       default: ((config.user && config.user.name) || '') +
@@ -82,6 +88,7 @@ NodejsGenerator.prototype.askFor = function askFor () {
     this.keywords = props.keywords
     this.githubName = props.githubName
     this.author = props.author
+    this.cliName = props.cliName
     this.copyrightName = props.author.replace(/<[^>]*?>/gm, '').trim()
     this.assertionLibrary = props.assertionLibrary
 
@@ -100,6 +107,8 @@ NodejsGenerator.prototype.build = function build () {
   this.copy('gitignore', '.gitignore')
   this.copy('LICENSE', 'LICENSE')
   this.template('README.md', 'README.md')
+  this.mkdir('bin')
+  this.template('cli', ('bin/cli'))
 }
 
 NodejsGenerator.prototype.testFrameworks = function mocha () {

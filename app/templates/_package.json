@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/<%= githubName %>/<%= moduleName %>"
   },
+  "bin": {
+      "<%= cliName %>" : "bin/cli"
+     },
   "keywords": <%= JSON.stringify(keywords) %> ,
   "author": "<%= dequote(author) %>",
   "license": "MIT",
