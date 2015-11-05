@@ -54,13 +54,6 @@ NodejsGenerator.prototype.askFor = function askFor () {
       }
     },
     {
-      type: 'list',
-      name: 'assertionLibrary',
-      message: 'Assertion Library',
-      choices: ['expect.js', 'chai', 'none'],
-      default: 'expect.js'
-    },
-    {
       type: 'input',
       name: 'githubName',
       message: 'Your github username',
@@ -90,7 +83,6 @@ NodejsGenerator.prototype.askFor = function askFor () {
     this.author = props.author
     this.cliName = props.cliName
     this.copyrightName = props.author.replace(/<[^>]*?>/gm, '').trim()
-    this.assertionLibrary = props.assertionLibrary
 
     this.dequote = function (str) {
       return str.replace(/\"/gm, '\\"')

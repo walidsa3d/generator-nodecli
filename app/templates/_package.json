@@ -20,19 +20,8 @@
     "url": "https://github.com/<%= githubName %>/<%= moduleName %>/issues"
   },
   "dependencies": {},
-  "devDependencies": { <%
-    switch (assertionLibrary) {
-      case 'expect.js':
-        print('    "expect.js": "~0.3.0",');
-        break;
-
-      case 'chai':
-        print('    "chai": "~1.10.0",');
-        break;
-
-      default:
-        break;
-    } %>
+  "devDependencies": {
+    "chai": "~1.10.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-bump": "^0.6.0",
     "grunt": "~0.4.1",
