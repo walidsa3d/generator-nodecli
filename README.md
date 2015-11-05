@@ -6,15 +6,15 @@ A node.js cli app generator for [Yeoman](http://yeoman.io).
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 
-### Installation
+### Install
 
-To install generator-nodule from npm, run:
+To install from npm, run:
 
 ```
 $ npm install -g generator-nodecli
 ```
-
-Finally, initiate the generator:
+### Usage
+Initiate the generator:
 
 ```
 $ yo nodecli
@@ -26,10 +26,10 @@ This generator will install the following files:
     * grunt-complexity - show code complexity
     * grunt-contrib-watch - watch for changes then run tests
     * grunt-mocha-cli - run mocha tests
-    * grunt-bump : easily release versions
+    * grunt-bump - easily release versions
 * .travis.yml - set up so you can push and get [travis-ci](http://travis-ci.org)
    continous integration tests.
-* .gitignore - ignore the usual cruft.
+* .gitignore - ignore the usual stuff.
 * LICENSE - MIT license initialized with your details.
 * README.md - Initialized with your details and travis-ci badges.
 * index.js - Initial library file
