@@ -5,16 +5,18 @@
   "main": "lib.js",
   "scripts": {
     "test": "mocha",
-    "test": "mocha",
     "lint": "jshint lib test",
     "preversion": "npm run lint",
+    "docs": "marked-man ./man/<%= cliName %>.md > ./man/<%= cliName %>.1",
     "postversion": "git push && git push --tags && npm run changelog && git push ",
+    "postinstall": "npm run docs",
     "changelog": "rm CHANGELOG.md && changelog https://github.com/<%= githubName %>/<%= moduleName %> all > CHANGELOG.md && git add . && git commit . -m changelog && git push"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/<%= githubName %>/<%= moduleName %>.git"
   },
+  "man": "./man/<%= moduleName %>.1",
   "bin": {
       "<%= cliName %>" : "bin/cli"
      },
@@ -25,6 +27,8 @@
     "url": "https://github.com/<%= githubName %>/<%= moduleName %>/issues"
   },
   "dependencies": {
+    "marked": "^0.3.6",
+    "marked-man": "^0.1.5",
     "commander": "^2.9.0",
     "prettyjson": "^1.1.3"
   },
