@@ -94,7 +94,7 @@ NodejsGenerator.prototype.askFor = function askFor () {
 
 NodejsGenerator.prototype.build = function build () {
   this.mkdir('man')
-  this.template('man.md', './man/'+this.moduleName+'.md')
+  this.template('man.md', './man/'+this.cliName+'.md')
   this.template('_package.json', 'package.json')
   this.copy('travis.yml', '.travis.yml')
   this.copy('gitignore', '.gitignore')

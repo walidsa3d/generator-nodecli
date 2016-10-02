@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/<%= githubName %>/<%= moduleName %>.git"
   },
-  "man": "./man/<%= moduleName %>.1",
+  "man": "./man/<%= cliName %>.1",
   "bin": {
       "<%= cliName %>" : "bin/cli"
      },
