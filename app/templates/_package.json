@@ -4,7 +4,8 @@
   "description": "<%= dequote(moduleDesc) %>",
   "main": "lib.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "changelog": "rm CHANGELOG.md && changelog https://github.com/<%= githubName %>/<%= moduleName %> all > CHANGELOG.md && git add . && git commit . -m changelog && git push"
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,7 @@
   },
   "devDependencies": {
     "changelog": "^1.0.7",
-    "documentation": "^3.0.0",
     "chai": "~1.10.0",
-    "eslint": "^3.3.0",
-    "jscs": "^3.0.4",
-    "jsdoc": "^3.3.3",
     "mocha": "^3.1.0"
   }
 }
