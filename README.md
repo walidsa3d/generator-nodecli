@@ -2,9 +2,9 @@
 
 A node.js cli app generator for [Yeoman](http://yeoman.io).
 
-[![Build Status](https://secure.travis-ci.org/walidsa3d/generator-nodecli.png?branch=master)](https://travis-ci.org/walidsa3d/generator-nodecli)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-
+* pure mocha tests
+* no grunt
+* no gulp
 
 ### Install
 
@@ -34,4 +34,3 @@ This generator will install the following files:
 * README.md - Initialized with your details and travis-ci badges.
 * index.js - Initial library file
 * test/index.js - unit test using mocha and chai
-
