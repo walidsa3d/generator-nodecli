@@ -15,6 +15,6 @@ if (program.args.length < 1) {
 var cli = require('../index.js')();
 
 cli
-  .parse(program);
+  .parse(program)
   .then(console.log)
   .catch(console.error)
