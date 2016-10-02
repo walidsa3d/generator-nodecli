@@ -4,7 +4,7 @@
 var path    = require('path');
 var helpers = require('yeoman-generator').test;
 
-describe('nodejs generator', function () {
+describe.skip('nodejs generator', function () {
   var tempPath = path.join(__dirname, '..', 'temp');
   beforeEach(function (done) {
     helpers.testDirectory(tempPath, function (err) {
