@@ -2,7 +2,7 @@
   "name": "<%= moduleName %>",
   "version": "0.0.1",
   "description": "<%= dequote(moduleDesc) %>",
-  "main": "lib.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha",
     "lint": "jshint lib test",
