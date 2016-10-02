@@ -2,9 +2,9 @@
   "name": "<%= moduleName %>",
   "version": "1.0.0",
   "description": "<%= dequote(moduleDesc) %>",
-  "main": "index.js",
+  "main": "lib.js",
   "scripts": {
-    "test": "node_modules/.bin/grunt ci"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -21,12 +21,12 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "changelog": "^1.0.7",
+    "documentation": "^3.0.0",
     "chai": "~1.10.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-bump": "^0.6.0",
-    "grunt": "~0.4.1",
-    "grunt-mocha-cli": "~1.1.0",
-    "grunt-complexity": "~0.1.3",
-    "grunt-cli": "~0.1.9"
+    "eslint": "^3.3.0",
+    "jscs": "^3.0.4",
+    "jsdoc": "^3.3.3",
+    "mocha": "^3.1.0"
   }
 }
