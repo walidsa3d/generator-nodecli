@@ -97,6 +97,7 @@ NodejsGenerator.prototype.build = function build () {
   this.copy('travis.yml', '.travis.yml')
   this.copy('gitignore', '.gitignore')
   this.copy('LICENSE', 'LICENSE')
+  this.copy('CHANGELOG.md', 'CHANGELOG.md')
   this.template('README.md', 'README.md')
   this.mkdir('bin')
   this.template('cli', ('bin/cli'))
