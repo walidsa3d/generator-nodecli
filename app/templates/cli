@@ -13,4 +13,4 @@ if (program.args.length < 1) {
   program.help();
 }
 
-require('../index.js')
+require('../index.js')()
