@@ -5,6 +5,10 @@
   "main": "lib.js",
   "scripts": {
     "test": "mocha",
+    "test": "mocha",
+    "lint": "jshint lib test",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags && npm run changelog && git push ",
     "changelog": "rm CHANGELOG.md && changelog https://github.com/<%= githubName %>/<%= moduleName %> all > CHANGELOG.md && git add . && git commit . -m changelog && git push"
   },
   "repository": {
@@ -27,6 +31,7 @@
   "devDependencies": {
     "changelog": "^1.0.7",
     "chai": "~1.10.0",
-    "mocha": "^3.1.0"
+    "mocha": "^3.1.0",
+    "jshint": "^2.9.3"
   }
 }
