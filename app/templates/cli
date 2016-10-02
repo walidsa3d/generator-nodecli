@@ -7,10 +7,11 @@ program
   .description(pkg.description)
   .parse(process.argv);
 
-
 // print help with no args
 if (program.args.length < 1) {
   program.help();
 }
 
-require('../index.js')()
+var cli = require('../index.js');
+cli
+  .parse(program);
