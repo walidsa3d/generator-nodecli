@@ -9,7 +9,8 @@
     "preversion": "npm run lint",
     "docs": "marked-man ./man/<%= cliName %>.md > ./man/<%= cliName %>.1",
     "postversion": "git push && git push --tags && npm run changelog && git push ",
-    "postinstall": "npm run docs",
+    "postinstall": "npm run docs && npm run setpermissions",
+    "setpermissions": "chmod ugo+x ./bin/cli",
     "changelog": "rm CHANGELOG.md && changelog https://github.com/<%= githubName %>/<%= moduleName %> all > CHANGELOG.md && git add . && git commit . -m changelog && git push"
   },
   "repository": {
