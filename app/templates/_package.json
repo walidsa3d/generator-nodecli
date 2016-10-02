@@ -27,6 +27,7 @@
     "url": "https://github.com/<%= githubName %>/<%= moduleName %>/issues"
   },
   "dependencies": {
+    "linger": "0.0.3",
     "marked": "^0.3.6",
     "marked-man": "^0.1.5",
     "commander": "^2.9.0",
