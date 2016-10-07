@@ -93,15 +93,17 @@ NodejsGenerator.prototype.askFor = function askFor () {
 }
 
 NodejsGenerator.prototype.build = function build () {
+  this.mkdir('man')
+  this.template('man.md', './man/'+this.cliName+'.md')
   this.template('_package.json', 'package.json')
-  this.template('Gruntfile.js', 'Gruntfile.js')
   this.copy('travis.yml', '.travis.yml')
   this.copy('gitignore', '.gitignore')
   this.copy('LICENSE', 'LICENSE')
+  this.copy('CHANGELOG.md', 'CHANGELOG.md')
   this.template('README.md', 'README.md')
   this.mkdir('bin')
   this.template('cli', ('bin/cli'))
-}
+  }
 
 NodejsGenerator.prototype.testFrameworks = function mocha () {
   this.mkdir('test')
